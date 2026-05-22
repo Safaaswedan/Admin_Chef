@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+// أو استخدم BrowserRouter مع basename
 import AdminLogin from './components/admin/AdminLogin';
 import AdminLayout from './components/admin/AdminLayout';
 import Dashboard from './components/admin/Dashboard';
@@ -42,7 +44,7 @@ function App() {
       <Routes>
         <Route path="/admin/login" element={<AdminLogin onLoginSuccess={handleLogin} />} />
         
-        <Route path="/admin" element={
+        < Route path="/admin" element={
           <ProtectedRoute isLoggedIn={isLoggedIn} redirectTo="/admin/login">
             <AdminLayout />
           </ProtectedRoute>
