@@ -6,6 +6,8 @@ import './App.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename="/Admin_Chef">
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
-);
+)
